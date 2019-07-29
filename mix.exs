@@ -33,19 +33,8 @@ defmodule MicrosoftGraphApi.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.3.4"},
-      {:phoenix_pubsub, "~> 1.0"},
-      {:phoenix_html, "~> 2.10"},
-      {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:gettext, "~> 0.11"},
-      {:plug_cowboy, "~> 1.0"},
-      {:cowboy, "~> 1.0"},
-      {:httpoison, "~> 1.4"},
-      {:poison, "~> 3.1"},
-      {:retry, "~> 0.11"},
-      {:bypass, "~> 0.8", only: :test},
-      {:credo, "~> 0.10.0", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:google_gax, "~> 0.1"},
+      {:ex_doc, "~> 0.16", only: :dev}
     ]
   end
 end
