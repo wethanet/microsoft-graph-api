@@ -6,10 +6,8 @@ defmodule MicrosoftGraphApi.Mixfile do
       app: :microsoft_graph_api,
       version: "0.0.1",
       elixir: "~> 1.7",
-      test_coverage: [tool: ExCoveralls],
-      elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
-      start_permanent: Mix.env() == :prod,
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
       deps: deps(),
       description: description(),
       name: "Microsoft Graph API",
@@ -51,8 +49,7 @@ defmodule MicrosoftGraphApi.Mixfile do
       # This option is only needed when you don't want to use the OTP application name
       name: "microsoft-graph-api",
       # These are the default files included in the package
-      files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
-                license* CHANGELOG* changelog* src),
+      files: ~w(lib priv .formatter.exs mix.exs README* LICENSE*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/wethanet/microsoft-graph-api"}
     ]
