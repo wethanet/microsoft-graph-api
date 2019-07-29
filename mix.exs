@@ -10,7 +10,10 @@ defmodule MicrosoftGraphApi.Mixfile do
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: description(),
+      name: "Microsoft Graph API",
+      source_url: "https://github.com/wethanet/microsoft-graph-api"
     ]
   end
 
@@ -37,4 +40,9 @@ defmodule MicrosoftGraphApi.Mixfile do
       {:ex_doc, "~> 0.16", only: :dev}
     ]
   end
+
+  defp description() do
+    "An Elixir library wrapping the Microsoft graph API."
+  end
+
 end
