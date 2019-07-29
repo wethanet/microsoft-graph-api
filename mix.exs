@@ -13,7 +13,8 @@ defmodule MicrosoftGraphApi.Mixfile do
       deps: deps(),
       description: description(),
       name: "Microsoft Graph API",
-      source_url: "https://github.com/wethanet/microsoft-graph-api"
+      source_url: "https://github.com/wethanet/microsoft-graph-api",
+      package: package()
     ]
   end
 
@@ -43,6 +44,18 @@ defmodule MicrosoftGraphApi.Mixfile do
 
   defp description() do
     "An Elixir library wrapping the Microsoft graph API."
+  end
+
+  defp package() do
+    [
+      # This option is only needed when you don't want to use the OTP application name
+      name: "microsoft-graph-api",
+      # These are the default files included in the package
+      files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
+                license* CHANGELOG* changelog* src),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/wethanet/microsoft-graph-api"}
+    ]
   end
 
 end
